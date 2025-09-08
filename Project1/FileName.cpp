@@ -19,17 +19,38 @@ public: // интерфейс объекта
         x = _x;
         y = _y;
     }
-    void Sum(Point b)
+    // ----------------- методы аксессоры 
+    void SetSumbol(char sym)
     {
-        cout << "X:" << x + b.x << "\tY:" << y + b.y << endl;
+        s = sym;
     }
-    void Minus(Point b)
+    char GetSumbol()
     {
-        cout << "X:" << x - b.x << "\tY:" << y - b.y << endl; 
+        return s;
     }
-    void Multiplication(Point b)
+    void SetX(int a)
     {
-        cout << "X:" << x * b.x << "\tY:" << y * b.y << endl;
+        if (a >= 0)
+        {
+            x = a;
+        }
+    }
+    int GetX()
+    {
+        return x;
+
+    }
+    void SetY(int a)
+    {
+        if (a >= 0)
+        {
+            y = a;
+        }
+    }
+    int GetY()
+    {
+        return y;
+
     }
 };
 int main() // клент
@@ -42,8 +63,9 @@ int main() // клент
 
     b.Init('B', 5, 16);
     b.Print();
-    a.Sum(b);
-    a.Minus(b);
-    a.Multiplication(b);
-
+    a.SetSumbol('T');
+    a.Print();
+    char c = a.GetSumbol();
+    cout << c << endl;
+    
 }
