@@ -3,7 +3,7 @@ using namespace std;
 
 class Student
 {
-	char *name;
+	char name;
 	char *surname;
 	int age;
 public:
